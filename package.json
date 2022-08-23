@@ -1,0 +1,26 @@
+{
+  "name": "facebook-clone-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parindyawijeseskara/Facebook-Clone-Application.git"
+  },
+  "author": "danushi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parindyawijeseskara/Facebook-Clone-Application/issues"
+  },
+  "homepage": "https://github.com/parindyawijeseskara/Facebook-Clone-Application#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongod": "^2.0.0",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  }
+}
