@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
+const user = require('./routes/user')
 const app = express()
 const port = 5000;
 
@@ -13,6 +14,7 @@ con.on("open",()=>{
 })
 
 app.use(express.json())
+app.use('/user',user)
 
 
 app.get('/',(req,res)=>{
