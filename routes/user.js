@@ -80,4 +80,15 @@ router.delete('/:id',async(req,res)=>{
     }
 })
 
+//user login using email and password
+router.get('/login/:email/:password',async(req,res)=>{
+    try {
+        const login = await User.find({email:req.params.email,password:req.params.password})
+        res.json(login)
+    } catch (err) {
+        res.send('Err:'+err)
+    }
+})
+
+
 module.exports = router
