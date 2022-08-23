@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "f34a4bdf-a776-4f50-9f4a-f210a416c30b",
+		"name": "facebook-clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"U003\",\r\n    \"firstName\":\"Chamupathi\",\r\n    \"surname\":\"Wijesekara\",\r\n    \"gender\":\"female\",\r\n    \"dateOfBirth\":\"1998-12-10\",\r\n    \"password\":\"2346\",\r\n    \"phoneNumber\":\"0778749864\",\r\n    \"email\":\"chamu@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"U002\",\r\n    \"firstName\":\"Madhu\",\r\n    \"surname\":\"Wijesekara\",\r\n    \"gender\":\"female\",\r\n    \"dateOfBirth\":\"1996-09-28\",\r\n    \"password\":\"2345\",\r\n    \"phoneNumber\":\"0773879654\",\r\n    \"email\":\"madhu@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/6304a2b9b3eefa7dcf9a0068",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"6304a2b9b3eefa7dcf9a0068"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/6304a8bf932b7855393a651e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"6304a8bf932b7855393a651e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/6304a8bf932b7855393a651e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"6304a8bf932b7855393a651e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login using email and password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/login/danu@gmail.com/1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login",
+								"danu@gmail.com",
+								"1234"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "chamu@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "2346",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "create posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"U003\",\r\n    \"date\":\"2022-08-23\",\r\n    \"time\":\"10:05 p.m\",\r\n    \"title\":\"Italian Burger\",\r\n    \"body\":\"Try our new ...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete posts by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/post/630512ee102ac03b63db1e2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"630512ee102ac03b63db1e2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get posts by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/post/U002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"U002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update posts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"U002\",\r\n    \"date\":\"2022-08-23\",\r\n    \"time\":\"08:05 p.m\",\r\n    \"title\":\"National pet day\",\r\n    \"body\":\"Here's some pics of ...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/post/6305120b102ac03b63db1e26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"6305120b102ac03b63db1e26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
